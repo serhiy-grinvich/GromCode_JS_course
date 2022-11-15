@@ -8,14 +8,16 @@ function splitString(str, num) {
     let subStr = str.substr(positionIndex, num);
     positionIndex += num;
     if (subStr.length < num) {
-      while (subStr.length < num) {
-        subStr += '.';
-      }
+      subStr += '.'.repeat(num - subStr.length);
     }
     resultArr.push(subStr);
   }
   return resultArr;
 }
+
+// while (subStr.length < num) {
+//   subStr += '.';
+// }
 
 // algo
 // 1.check requirements
@@ -27,7 +29,7 @@ function splitString(str, num) {
 
 // data test
 const text = '12345678910';
-console.log(splitString(text, 5));
+console.log(splitString(text, 9));
 
 // work
 //
