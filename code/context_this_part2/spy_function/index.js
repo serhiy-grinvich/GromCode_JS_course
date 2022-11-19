@@ -16,8 +16,8 @@ function saveFuncCalls(func) {
 
   return function withMemo() {
     memo.push(Array.from(arguments));
-    console.log('in withMemo func this', this);
-    console.log('memo:', memo);
+    // console.log('in withMemo func this', this);
+    // console.log('memo:', memo);
 
     withMemo.callsHistory = memo;
     return func.apply(this, arguments);

@@ -19,6 +19,7 @@
  * и должна принимать 2 числа и возвращать из произведение
  */
 const multiplier = calculator.bind({ operation: '*' });
+
 // put your code here
 
 /*
