@@ -67,3 +67,5 @@ function removeHandlers() {
 }
 const removeBttn = document.querySelector('.remove-handlers-btn');
 removeBttn.addEventListener('click', removeHandlers);
+
+////////////////
