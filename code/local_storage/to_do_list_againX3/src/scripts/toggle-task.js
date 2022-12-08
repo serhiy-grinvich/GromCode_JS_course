@@ -4,6 +4,7 @@ import { renderTasks } from './render-list.js';
 
 export const onCheckboxChange = event => {
   const oldTasks = getItem('tasksList');
+  // debugger;
   if (!event.target.dataset.taskId) return;
   const newTasks = oldTasks.map(task => {
     if (task.id === Number(event.target.dataset.taskId)) {

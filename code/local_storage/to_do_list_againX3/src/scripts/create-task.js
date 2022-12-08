@@ -6,7 +6,7 @@ export const addNewTask = () => {
   if (inputElem.value === '') return;
   // listElem.innerHTML = ''; //- лишнее. перенесено в рендер
   const tasks = getItem('tasksList') || [];
-  tasks.push({
+  tasks.unshift({
     text: inputElem.value,
     done: false,
     id: tasks.length + 1,
