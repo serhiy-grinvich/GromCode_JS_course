@@ -29,12 +29,13 @@ const onSearch = () => {
     })
     .then(url => fetchUserRepos(url))
     .then(repoList => {
-      hideSpinner();
       renderUserRepos(repoList);
     })
     .catch(err => {
-      hideSpinner();
       alert(err.message);
+    })
+    .finally(() => {
+      hideSpinner();
     });
 };
 showButtonElem.addEventListener('click', onSearch);
